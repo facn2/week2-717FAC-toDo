@@ -23,15 +23,22 @@ var todoFunctions = {
     return todoList;
   },
   deleteTodo: function(todos, idToDelete) {
-    // should leave the input argument todos unchanged
-    // return a new array, this should not contain any todo with an id of idToDelete
-    // hint: array.filter
+    var keepArr = todos.filter(function(todo){
+        return todo.id != 1;
+    });
+    return keepArr;
   },
+
   markTodo: function(todos, idToMark) {
-    // should leave the input argument todos unchanged
-    // in the new todo array, all elements will remain unchanged except the one with id: idToMark
-    // this element will have its done value toggled
-    // hint: array.map
+    var markArr = todos.map(function(todo) {
+      if (todo.id === idToMark) {
+        var copyTodo = Object.assign({}, todo, {done: true})
+        return copyTodo;
+      } else {
+        return todo;
+      }
+    });
+    return markArr;
   },
   sortTodos: function(todos, sortFunction) {
     // stretch goal! Do this last

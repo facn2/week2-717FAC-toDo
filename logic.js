@@ -9,16 +9,18 @@ var todoFunctions = {
     var idCounter = 0;
 
     function incrementCounter() {
-      return (idCounter += 1);
+      return (idCounter = idCounter + 1);
     }
 
     return incrementCounter;
   })(),
   addTodo: function(todos, newTodo) {
-    // should leave the input argument todos unchanged
-    // returns a new array, it should contain todos with the newTodo added to the end.
-    // add an id to the newTodo. You can use the generateId function to create an id.
-    // hint: array.concat
+    var initialObject = {};
+    initialObject['id'] = todoFunctions.generateId();
+    initialObject['description'] = newTodo['description'];
+    initialObject['done'] = false;
+    var todoList = todos.concat(initialObject);
+    return todoList;
   },
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged
@@ -38,3 +40,6 @@ var todoFunctions = {
     // hint: array.slice, array.sort
   },
 };
+
+module.exports = todoFunctions;
+

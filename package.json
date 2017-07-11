@@ -1,0 +1,23 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "## Create a To-Do App",
+  "main": "dom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn2/week2-717FAC-toDo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn2/week2-717FAC-toDo/issues"
+  },
+  "homepage": "https://github.com/facn2/week2-717FAC-toDo#readme",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "tape": "^4.7.0"
+  }
+}

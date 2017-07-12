@@ -36,13 +36,19 @@
       update(newState);
     });
     if(todo.done == true){
-      desSpan.classList.toggle('lineThrough');
+      desSpan.classList.add('lineThrough');
       markTodoButtonNode.classList.add('checkedButton');
     }
 
     todoNode.appendChild(markTodoButtonNode);
-    // add classes for css
-    //console.log(desSpan);
+    //add sortButton
+    document.getElementById('sortButton').addEventListener('click', function() {
+      var newState = todoFunctions.sortTodos(state, function(a, b){
+          if (a.description < b.description) return -1;
+          else return 1;
+        });
+      update(newState);
+    });
     return todoNode;
   };
 
@@ -58,8 +64,6 @@
     var newState = todoFunctions.addTodo(state, inputObject);
 
     update(newState);
-
-    // todoNode.createTodoNode;
     });
   }
 

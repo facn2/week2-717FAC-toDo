@@ -24,11 +24,10 @@ var todoFunctions = {
   },
   deleteTodo: function(todos, idToDelete) {
     var keepArr = todos.filter(function(todo){
-        return todo.id != 1;
+        return todo.id != idToDelete;
     });
     return keepArr;
   },
-
   markTodo: function(todos, idToMark) {
     var markArr = todos.map(function(todo) {
       if (todo.id === idToMark) {
@@ -49,4 +48,3 @@ var todoFunctions = {
 };
 
 module.exports = todoFunctions;
-

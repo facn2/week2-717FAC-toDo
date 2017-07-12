@@ -1,0 +1,91 @@
+body {
+  background-color: #F7FCC3;
+  margin-top: 3em;
+  color: #2A2D2D;
+}
+h1 {
+  color: #211D3E;
+  font-size: 3em;
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+li {
+  width: 50%;
+  margin: 0 auto;
+  background: #A1FA96;
+  margin-top: 1em;
+  padding: 1em;
+}
+li:nth-child(odd) {
+  background: #62E6D0;
+  margin: 0.3em auto;
+}
+span {
+  font-size: 2em;
+  color:#00BE96;
+}
+button {
+  /*background-color: #28BE00;*/
+  background: url('https://image.flaticon.com/icons/svg/61/61685.svg') no-repeat;
+  width: 4em;
+  height: 3em;
+  margin-left: 2em;
+  float: right;
+}
+form {
+  width: 80%;
+  margin: 1em auto;
+  padding: 2em;
+}
+input {
+  display: block;
+  width: 7em;
+  height: 2em;
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: #F7FCC3;
+  background-color: #211D3E;
+  border: 2px solid grey;
+  padding: 0.5em;
+}
+#userInput {
+  width: 20em;
+  margin-bottom: 2em;
+}
+#sortButton {
+  width: 5em;
+  height: 2em;
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: #F7FCC3;
+  background-color: #211D3E;
+  border: 2px solid grey;
+  padding: 0.5em;
+}
+.lineThrough {
+  text-decoration: line-through;
+  color: #979E9D;
+}
+.checkedButton {
+  background-image: url(https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/tick_green.png);
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2em;
+  }
+  li {
+    width: 100%;
+    margin: 0 auto;
+  }
+  button {
+    width: 2em;
+    height: 1.5em;
+  }
+  #userInput {
+    width: 8em;
+    height: 2em;
+    margin-bottom: 1em;
+  }
+}

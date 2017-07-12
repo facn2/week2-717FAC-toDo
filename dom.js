@@ -34,12 +34,15 @@
     markTodoButtonNode.addEventListener('click', function() {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
-      desSpan.classList.add('lineThrough');
-      this.classList.add('checkedButton');
     });
+    if(todo.done == true){
+      desSpan.classList.toggle('lineThrough');
+      markTodoButtonNode.classList.add('checkedButton');
+    }
+
     todoNode.appendChild(markTodoButtonNode);
     // add classes for css
-
+    //console.log(desSpan);
     return todoNode;
   };
 

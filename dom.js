@@ -25,6 +25,7 @@
     deleteButtonNode.addEventListener('click', function() {
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
+
     });
     todoNode.appendChild(deleteButtonNode);
 
@@ -33,7 +34,8 @@
     markTodoButtonNode.addEventListener('click', function() {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
-      desSpan.classList.add('line-through');
+      desSpan.classList.add('lineThrough');
+      this.classList.add('checkedButton');
     });
     todoNode.appendChild(markTodoButtonNode);
     // add classes for css
@@ -50,10 +52,10 @@
     var inputObject = {};
     inputObject['description'] = input;
 
-    var newState = state;
-    var newTodoSubmit = todoFunctions.addTodo(newState, inputObject);
+    var newState = todoFunctions.addTodo(state, inputObject);
+
     update(newState);
-    console.log(newTodoSubmit)
+
     // todoNode.createTodoNode;
     });
   }

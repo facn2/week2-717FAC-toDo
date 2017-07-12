@@ -24,7 +24,7 @@ var todoFunctions = {
   },
   deleteTodo: function(todos, idToDelete) {
     var keepArr = todos.filter(function(todo){
-        return todo.id != 1;
+        return todo.id != idToDelete;
     });
     return keepArr;
   },

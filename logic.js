@@ -24,14 +24,17 @@ var todoFunctions = {
   },
   deleteTodo: function(todos, idToDelete) {
     var keepArr = todos.filter(function(todo){
-        return todo.id != idToDelete;
+        return todo.id != 1;
     });
     return keepArr;
   },
+
   markTodo: function(todos, idToMark) {
     var markArr = todos.map(function(todo) {
       if (todo.id === idToMark) {
         var copyTodo = Object.assign({}, todo, {done: true})
+        // var copyTodo = todo.id;
+        // copyTodo = {done: true};
         return copyTodo;
       } else {
         return todo;

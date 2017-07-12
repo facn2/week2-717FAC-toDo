@@ -12,11 +12,11 @@ test('Initial Test', function(t) {
 // 	t.end()
 // });
 //
-// test('Test2', function (t) {
-// 	t.deepEqual(logic.addTodo([{description: 'wash dishes'}], {description: 'eat more food' }),
-// 		[{description: 'wash dishes'}, {description: 'eat more food'}], 'newTodos with array that includes a todo should return an array of objects with old and the newTodo')
-// 	t.end()
-// });
+test('Test2', function (t) {
+	t.deepEqual(logic.addTodo([{description: 'wash dishes'}], {description: 'eat more food'}),
+		[{description: 'wash dishes'}, {description: 'eat more food'}], 'newTodos with array that includes a todo should return an array of objects with old and the newTodo')
+	t.end()
+});
 //
 // test('Test3', function (t) {
 // 	t.deepEqual(logic.addTodo([], {description: 'eat more food' }),

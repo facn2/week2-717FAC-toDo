@@ -27,13 +27,16 @@ span {
   color:#00BE96;
 }
 button {
-  /*background-color: #28BE00;*/
-  background: url('https://image.flaticon.com/icons/svg/61/61685.svg') no-repeat;
+  background-color: #28BE00;
+  /*background: url('https://image.flaticon.com/icons/svg/61/61685.svg') no-repeat;*/
   width: 4em;
   height: 3em;
   margin-left: 2em;
   float: right;
 }
+/*button: nth-child(odd) {
+  background-color: blue;
+}*/
 form {
   width: 80%;
   margin: 1em auto;
@@ -49,16 +52,22 @@ input {
   background-color: #211D3E;
   border: 2px solid grey;
   padding: 0.5em;
+  float: none;
 }
 #userInput {
   width: 20em;
   margin-bottom: 2em;
 }
+#submitButton {
+  font-size: 2em;
+}
 #sortButton {
+  display: block;
   width: 5em;
   height: 2em;
-  margin: 0 auto;
-  font-size: 1.5em;
+  margin: 1em auto;
+  float: none;
+  font-size: 2em;
   color: #F7FCC3;
   background-color: #211D3E;
   border: 2px solid grey;
@@ -69,7 +78,7 @@ input {
   color: #979E9D;
 }
 .checkedButton {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/round-ui-icons/512/tick_green.png);
+  background: red;
 }
 @media (max-width: 320px) {
   h1 {

@@ -2,6 +2,8 @@
 
 ## Create a To-Do App  
 
+### Our site can be seen here: https://facn2.github.io/week2-717FAC-toDo/
+
 ### User stories:
 
 As a disorganised person I want to:

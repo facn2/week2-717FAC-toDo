@@ -1,5 +1,18 @@
 # week2-717FAC-toDo
 
+## Create a To-Do App
+
+## How to Use Our App
+
++ Clone this repository
+$ git clone https://github.com/facn2/week2-717FAC-toDo.git
+
++ Change directory into the cloned repository install all package dependendcies
+$ npm install
+
+Run the tests
+$ npm run test
+
 ## Create a To-Do App  
 
 ### Our site can be seen here: https://facn2.github.io/week2-717FAC-toDo/
@@ -23,3 +36,5 @@ We intend to write the three main functions using TDD method.
 + We will create a function for adding To-Do's
 +  We will create a function for marking To-Do's
 + We will create a function for deleting To-Do's
+
+

@@ -83,6 +83,15 @@
     var newState = todoFunctions.addTodo(state, inputObject);
     addTodoForm.reset();
 
+    if(input.length !== 0){
+      document.getElementById('sortButton').addEventListener('click', function() {
+    var newState = todoFunctions.sortTodos(state, function(a, b){
+        if (a.description < b.description) return -1;
+        else return 1;
+      });
+    update(newState);
+  });
+}
     update(newState);
     });
   }

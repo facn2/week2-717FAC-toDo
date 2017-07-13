@@ -24,7 +24,7 @@ li:nth-child(odd) {
 }
 span {
   font-size: 2em;
-  color:#00BE96;
+  color: #434052;
 }
 button {
   background-color: #28BE00;
@@ -49,7 +49,7 @@ input {
   margin: 0 auto;
   font-size: 1.5em;
   color: #F7FCC3;
-  background-color: #211D3E;
+  background-color: #55507E;
   border: 2px solid grey;
   padding: 0.5em;
   float: none;
@@ -57,6 +57,9 @@ input {
 #userInput {
   width: 20em;
   margin-bottom: 2em;
+}
+#userInput::placeholder {
+  color: #F7FCC3;
 }
 #submitButton {
   font-size: 2em;
@@ -69,7 +72,7 @@ input {
   float: none;
   font-size: 1em;
   color: #F7FCC3;
-  background-color: #211D3E;
+  background-color: #55507E;
   border: 2px solid grey;
   padding: 0.5em;
 }

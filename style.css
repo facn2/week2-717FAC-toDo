@@ -64,10 +64,10 @@ input {
 #sortButton {
   display: block;
   width: 5em;
-  height: 2em;
+  height: 4em;
   margin: 1em auto;
   float: none;
-  font-size: 2em;
+  font-size: 1em;
   color: #F7FCC3;
   background-color: #211D3E;
   border: 2px solid grey;
@@ -80,7 +80,11 @@ input {
 .checkedButton {
   background: red;
 }
-@media (max-width: 320px) {
+@media (max-width: 760px) {
+  body {
+    margin: 0;
+    width: 100%;
+  }
   h1 {
     font-size: 2em;
   }
@@ -91,6 +95,9 @@ input {
   button {
     width: 2em;
     height: 1.5em;
+  }
+  form {
+    width: auto;
   }
   #userInput {
     width: 8em;

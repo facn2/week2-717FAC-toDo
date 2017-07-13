@@ -1,46 +1,65 @@
-// part 2 linking it all together
-// The function here is called an iife,
-// it keeps everything inside hidden from the rest of our application
 (function() {
   // This is the dom node where we will keep our todo
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
+  // Initial ToDo List
   var state = [
-    { id: -3, description: 'first todo', done: false},
-    { id: -2, description: 'second todo', done: false},
-    { id: -1, description: 'third todo', done: false },
-    { id: 0, description: '4th todo', done: false}
-  ]; // this is our initial todoList
+    { id: -3, description: 'Buy some onions', done: false},
+    { id: -2, description: 'Chop them finely', done: false}
+  ];
 
-  // This function takes a todo, it returns the DOM node representing that todo
+  // For each ToDo Object
   var createTodoNode = function(todo) {
+    // Create li tag for each todo
     var todoNode = document.createElement('li');
-    // add span holding description
+    // And span tags
     var desSpan = document.createElement('span');
+    // Set the inner-text of span tags equal to the 'value' of the 'key' description 
     desSpan.innerText = todo['description'];
+    // Append the description to the li tag
     todoNode.appendChild(desSpan);
-    // this adds the delete button -- finish
-    var deleteButtonNode = document.createElement('button');
-    deleteButtonNode.addEventListener('click', function() {
-      var newState = todoFunctions.deleteTodo(state, todo.id);
-      update(newState);
+    //End
 
-    });
+    // For each Todo Object create a delete Button
+    var deleteButtonNode = document.createElement('button');
+    // Append Trash Can icon  to Delete Button using Font-Awesome Library
+    var deleteIcon = document.createElement('i');
+    deleteIcon.className = 'fa fa-trash';
+    deleteButtonNode.appendChild(deleteIcon)
+    // Append Delete Button to li 
     todoNode.appendChild(deleteButtonNode);
 
-    // add markTodo button
+    // When Delete Button is clicked run function of deleteTodo in logic.js
+    // make a varialbe newState which is the result of the deleteTodo function
+    deleteButtonNode.addEventListener('click', function() {
+      var newState = todoFunctions.deleteTodo(state, todo.id);
+    // run update function which updates state to become newstate
+      update(newState);
+    });
+
+    // For each Todo Object create a markTodo Button
     var markTodoButtonNode = document.createElement('button');
+    // Append check icon to to the MarkToDo Button
+    var markIcon = document.createElement('i');
+    markIcon.className = 'fa fa-check';
+    markTodoButtonNode.appendChild(markIcon);
+    //Append MarkToDo Button to li 
+    todoNode.appendChild(markTodoButtonNode);
+
+    // When markToDo Button is clicked run function of markTodo in logic.js
+    // make a varialbe newState which is the result of the deleteTodo function
     markTodoButtonNode.addEventListener('click', function() {
       var newState = todoFunctions.markTodo(state, todo.id);
       update(newState);
     });
-    if(todo.done == true){
+    // After running markTodo function the checked todo is given value todo.done of true
+    // For the marked todo add to classList
+    if(todo.done == true) {
       desSpan.classList.add('lineThrough');
       markTodoButtonNode.classList.add('checkedButton');
     }
 
-    todoNode.appendChild(markTodoButtonNode);
     //add sortButton
     document.getElementById('sortButton').addEventListener('click', function() {
       var newState = todoFunctions.sortTodos(state, function(a, b){
@@ -62,6 +81,7 @@
     inputObject['description'] = input;
 
     var newState = todoFunctions.addTodo(state, inputObject);
+    addTodoForm.reset();
 
     update(newState);
     });

@@ -30,17 +30,13 @@ var todoFunctions = {
   },
 
   markTodo: function(todos, idToMark) {
-    var markArr = todos.map(function(todo) {
-      if (todo.id === idToMark) {
-        var copyTodo = Object.assign({}, todo, {done: true})
-        // var copyTodo = todo.id;
-        // copyTodo = {done: true};
-        return copyTodo;
-      } else {
-        return todo;
-      }
+    var markedArr = todos.map(function(todo) {
+      var copiedTodo = Object.assign({}, todo);
+      if (copiedTodo.id === idToMark)
+          copiedTodo.done = !copiedTodo.done;
+      return copiedTodo;
     });
-    return markArr;
+    return markedArr;
   },
   sortTodos: function(todos, sortFunction) {
     var sortedArr = todos.slice().sort(sortFunction);

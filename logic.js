@@ -15,12 +15,18 @@ var todoFunctions = {
     return incrementCounter;
   })(),
   addTodo: function(todos, newTodo) {
-    var initialObject = {};
-    initialObject['id'] = todoFunctions.generateId();
-    initialObject['description'] = newTodo['description'];
-    initialObject['done'] = false;
-    var todoList = todos.concat(initialObject);
-    return todoList;
+    if(newTodo === undefined)
+      return todos;
+    else if(newTodo.description.length === 0)
+      return todos;
+    else{
+      var initialObject = {};
+      initialObject['id'] = todoFunctions.generateId();
+      initialObject['description'] = newTodo['description'];
+      initialObject['done'] = false;
+      var todoList = todos.concat(initialObject);
+      return todoList;
+    }
   },
   deleteTodo: function(todos, idToDelete) {
     var keepArr = todos.filter(function(todo){

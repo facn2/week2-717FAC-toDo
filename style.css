@@ -28,15 +28,17 @@ span {
 }
 button {
   background-color: #28BE00;
-  /*background: url('https://image.flaticon.com/icons/svg/61/61685.svg') no-repeat;*/
   width: 4em;
   height: 3em;
   margin-left: 2em;
   float: right;
 }
-/*button: nth-child(odd) {
-  background-color: blue;
-}*/
+.fa-trash {
+  font-size: 2em;
+}
+.fa-check {
+  font-size: 2em;
+}
 form {
   width: 80%;
   margin: 1em auto;
